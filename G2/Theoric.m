@@ -7,12 +7,6 @@
 % k : numero de caras
 % n : numero de lançamentos
 
-function prob = BernoulliTheoric (p, k, n)
-    prob = factorial(n)/(factorial(n-k)*factorial(k))*p^k*(1-p)^(n-k);
-end
-
-
-function prob = BernoulliTheoric (prob, p, k)
-    n = 
+function prob = Theoric (p, k, n)
     prob = factorial(n)/(factorial(n-k)*factorial(k))*p^k*(1-p)^(n-k);
 end
