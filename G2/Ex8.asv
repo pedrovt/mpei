@@ -1,0 +1,24 @@
+% 8. Considere uma linguagem com apenas 3 palavras {"um", "dois", "três"} e que permite sequências de 2
+% palavras. Se todas as frases forem equiprováveis e as duas palavras na frase puderem ser iguais:
+
+%% (a) Qual a probabilidade da sequência "um dois"?
+
+Casos possíveis: 9
+Casos 
+
+%% (b) Qual a probabilidade de "um" aparecer pelo menos uma vez?
+
+%% (c) Qual a probabilidade de ocorrer "um" ou "dois"?
+
+%% (d) Qual o valor de P["sequência incluir a palavra um" | "sequência inclui palavra dois"]?
+
+%% (e) Resolva a questão anterior para o caso de termos 10 palavras diferentes e sequências de 5 palavras
+%      com ajuda de um programa que calcule exaustivamente todas as possibilidades. 
+%      Sugestão: use números de 1 a 10 para representar as palavras e use Matlab/Octave. 
+%      Tente criar uma função com os parâmetros de entrada que considere adequados.
+
+%% (f) Repita a questão anterior para 11, 12, ... 20 palavras diferentes e represente a variação da probabilidade
+%      num gráfico. Nota: Devido à memória necessária não se pode ter valores muito elevados.
+
+%% (g) Adicione ao gráfico anterior, para comparação, a probabilidade se a linguagem não permitir repetições
+%      das palavras.
