@@ -37,6 +37,16 @@ numWordsSeq = 5;
 experience  = ceil (numWords * rand(numWordsSeq, N));      % each column have 5 lines (words), each one with a the number from 1 to 10 representating the word
 successes   = 0;                                 
 
+incluirPalavra1  = experience = 1 ;
+incluirPalavra2  = zeros (1, N);
+parfor i = 1:  N                                           % For each experience
+    if (length (unique(experience(:,i))) < numKeys)        % if the number of different numbers is smaller than the number of keys, ie not all numbers are different, ie at least one position has the same hash
+        successes =  successes + 1;                        % counts as success
+    end
+end
+
+fprintf('Probabiliy of having colisions with 1000 different hash values with k = 10 keys ==')
+disp(successes / N)
 %% (f) Repita a questão anterior para 11, 12, ... 20 palavras diferentes e represente a variação da probabilidade
 %      num gráfico. Nota: Devido à memória necessária não se pode ter valores muito elevados.
 

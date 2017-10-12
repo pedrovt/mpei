@@ -8,7 +8,7 @@ N = 1e5;         % Number of experiences
 numKeys = 10;    % Number of keys available (max number of keys is the number of positions in the array)
 hash = 999;      % Max value the hash function can return
 
-experience = ceil(hash * rand(numKeys, N));               % Each column contains 1 experience; each experience contains k lines, each one containing the hash value (0-999) for each key
+experience = floor(1000 * rand(numKeys, N));               % Each column contains 1 experience; each experience contains k lines, each one containing the hash value (0-999) for each key
 successes  = 0;                                 
 
 parfor i = 1:  N                                         % For each experience
@@ -23,16 +23,16 @@ disp(successes / N)
 %% (b) Faça um gráfico da probabilidade de colisões em função do número de keys.
 N = 1e3;            % Number of experiences
 numMaxKeys = 1000;  % Max number of keys available (max number of keys is the number of positions in the array)
-hash = 999;         % Max value the hash function can return
+hash = 1;           % Max value the hash function can return
 
 successes  = zeros(1, numMaxKeys);                                 
 
 for numKeys = 1 : numMaxKeys
-    experience = ceil(hash * rand(numKeys, N));           % Each column contains 1 experience; each experience contains numKeys lines, each one containing the hash value (0-999) for each key
+    experience = floor(hash * rand(numKeys, N));           % Each column contains 1 experience; each experience contains numKeys lines, each one containing the hash value (0-999) for each key
     
-    for i = 1:  N                                         % For each one of the N experiences
+    for i = 1:  N                                          % For each one of the N experiences
         if (length (unique(experience(:,i))) ~= numKeys)   % if the number of different numbers is smaller than the number of keys, ie not all numbers are different, ie at least one position has the same hash
-            successes(numKeys) = successes(numKeys) + 1;  % counts as success
+            successes(numKeys) = successes(numKeys) + 1;   % counts as success
         end
     end
     
@@ -52,16 +52,16 @@ title('Probability of colision in function of the number of keys')
 
 N = 1e3;            % Number of experiences
 numKeys = 50;       % Number of keys available
-hashMax = 999;      % Max value the hash function can return (<=> size of the array)
+hashMax = 1000;      % Max value the hash function can return (<=> size of the array)
 
 successes  = zeros(1, hashMax);                                 
 
 for hash = 1 : hashMax
-    experience = ceil(hash * rand(numKeys, N));           % Each column contains 1 experience; each experience contains numKeys lines, each one containing the hash value (0-999) for each key
+    experience = floor(hash * rand(numKeys, N));           % Each column contains 1 experience; each experience contains numKeys lines, each one containing the hash value (0-999) for each key
     
-    for i = 1:  N                                         % For each one of the N experiences
+    for i = 1:  N                                          % For each one of the N experiences
         if (length (unique(experience(:,i))) == numKeys)   % if the number of different numbers is smaller than the number of keys, ie not all numbers are different, ie at least one position has the same hash
-            successes(hash) = successes(hash) + 1;  % counts as success
+            successes(hash) = successes(hash) + 1;         % counts as success
         end
     end
     
@@ -71,4 +71,4 @@ prob = successes / N;
 plot(prob)
 xlabel('hashMax')
 ylabel('P(hashMax)')
-title('Probability of colision in function of the array size/max value of the hash')
+title('Probability of not coliding in function of the array size/max value of the hash')
