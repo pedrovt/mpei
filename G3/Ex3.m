@@ -16,7 +16,7 @@ xlabel('xi')
 title('Probability Mass Function (PMF) of Random Variable X');
 grid on
 
-% (b) Calcule o valor esperado, a variˆancia e o desvio padr˜ao de X com base em pX(x).
+% (b) Calcule o valor esperado, a variância e o desvio padrão de X com base em pX(x).
 expectedValue = sum([0:n].*pmf);
 variance      = sum(([0:n]).^2.*pmf) - expectedValue ^ 2;
 stdDeviation  = sqrt(variance);
