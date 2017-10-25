@@ -24,7 +24,7 @@ xlabel('Num of faulty pieces in a 5 pieces sample')
 title('Probability distribution of Random Variable X');
 grid on
 
-%    (b) a probabilidade de, no máximo, 2 das peças de uma amostra serem defeituosas.
+%%    (b) a probabilidade de, no máximo, 2 das peças de uma amostra serem defeituosas.
      
 % Analiticamente
 % P(X <= 2) = Sum(k = 0 -> 2) de (5 k) * 0.3^k * (0.7)^5-k = 0.8369

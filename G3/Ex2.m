@@ -24,7 +24,7 @@
 %                | 0.01  , xi = 100
 %                | 0     , outros valores de xi
 
-stem([5, 50, 100], [0.9, 0.09, 0.01],)
+stem([5, 50, 100], [0.9, 0.09, 0.01])
 ylabel('P(X=xi)')
 xlabel('xi')
 axis([0 100 0 1])

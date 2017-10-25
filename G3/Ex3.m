@@ -29,6 +29,7 @@ fprintf ('Standard Deviation= %.3f\n', stdDeviation)
 %% (c) Identifique o tipo da distribuic¸ ˜ao da vari´avel aleat´oria X e escreva a express˜ao da respectiva func¸ ˜ao
 % de probabilidade.
 
+% A varíavel X é uma variável aleatória discreta Binomial.
 
 %% (d) Substitua os valores admiss´?veis da v.a. X na func¸ ˜ao obtida acima e compare com os c´alculos
 % efectuados na al´?nea a) desta quest˜ao.

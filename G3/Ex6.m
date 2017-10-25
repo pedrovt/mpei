@@ -40,7 +40,7 @@ probBinomSimul = sum(numSuccesses) / N;
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Probability using Poisson distribution   
-lambda = n*p; % µ = np na distribuição Binomial de Poisson
+lambda = n*p % µ = np na distribuição Binomial de Poisson
 
 probPoisson = (lambda^k/factorial(k)) * exp(-lambda);
 

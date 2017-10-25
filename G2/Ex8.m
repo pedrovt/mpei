@@ -23,7 +23,7 @@
 
 
 %% (d) Qual o valor de P["sequência incluir a palavra um" | "sequência inclui palavra dois"]?
-%% P("um" | "dois") =  P("um" ? "dois") / P ("dois") = (2/9) / (1/3) = 2/3
+%% P("um" | "dois") =  P("um" ? "dois") / P ("dois") = (2/9) / (5/9) = 2/5
 
 %% (e) Resolva a questão anterior para o caso de termos 10 palavras diferentes e sequências de 5 palavras
 %      com ajuda de um programa que calcule exaustivamente todas as possibilidades.
