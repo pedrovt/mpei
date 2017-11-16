@@ -25,14 +25,30 @@ pmfPT=pmfLetrasPT(files, alphabet);
 distPT = cumsum(pmfPT);
 
 % Calculate probability of false positives for k between 1 and 15
+ % Get false positives (theoric)
+theoricalFalsePositives = zeros (1, kMax);
 falsePositives = zeros(1, kMax);
+
 fprintf('\nNumber of hash functions:');
 for k = 1: kMax
     falsePositives(k) = testStrs_kHashs(n, lengthTest, k, m, strLength, alphabet, distPT);
+    theoricalFalsePositives(:, k) = (1 - exp(-k*m/n))^k;
     fprintf('\n\t%d :  Probability of false positives = %.4f\n', k, falsePositives(k)/lengthTest);
+   
     figure(1);
-    plot(1:k, falsePositives(1:k)/lengthTest);
+    hold on
+    
+    % Plot for simulation values
+    plot(1:k, falsePositives(1:k)/lengthTest, 'r');
     xlabel('Number of hash functions');
     ylabel('Probability of false positives');
     drawnow;
+    
+    % Plot for theoric values
+    plot(1:k, theoricalFalsePositives(1:k), 'b');
+    drawnow;
+    
+    hold off
+    
+    legend('Simulation values', 'Theoric Values')
 end
