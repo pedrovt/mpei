@@ -1,3 +1,4 @@
+% From my G4
 function [ y ] = generateNumbersFromPmf( x, fx, N)
     % tic
     
