@@ -13,5 +13,5 @@ Métodos Probabilísticos para Engenharia Informática 2017
 - Aula 4 - Geração de números aleatórios
 - Aula 5 - Funções de Dispersão
 - Aula 6 - Bloom Filters
-- Aula 7 - Finding Similar
+- Aula 7 - Finding Similar Items
 - Aula 8 - Cadeias de Markov
