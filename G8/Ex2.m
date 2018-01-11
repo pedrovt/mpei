@@ -23,11 +23,11 @@ isStochasticMatrix(T);
 
 % (b) Crie o vector relativo ao estado inicial considerando que no total temos 90 alunos, o grupo A tem
 % o dobro da soma dos outros dois e os grupos B e C tem o mesmo numero de alunos.
-% Grupo B e C -> x alunos       ==> 18
-% Grupo A       -> 2(x+x) = 4x  ==> 72
-% Total             -> x + 4x = 90 <=> 5x = 90 <=> x = 18
+% Grupo B e C -> x alunos       ==> 15
+% Grupo A       -> 2(x+x) = 4x  ==> 60
+% Total             -> x + x + 4x = 90 <=> 6x = 90 <=> x = 15
 fprintf('\n-------------\nAlínea b, c:\n')
-X_B = [72/90; 18/90; 18/90]
+X_B = [60/90; 15/90; 15/90]
 
 % (c) Quantos elementos integrarao cada grupo no fim da aula 30 considerando como estado inicial o
 % definido na al?nea anterior?
